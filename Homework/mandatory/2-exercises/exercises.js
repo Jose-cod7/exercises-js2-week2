@@ -15,9 +15,19 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
-}
+  console.log(content)
+  let firstH = document.createElement("h1");
+  let secondH = document.createElement("h2");
+  document.querySelector("#content").appendChild(firstH);
+  document.querySelector("#content").appendChild(secondH);
+  let i = 0;
+  for (let i = 0; i < arrayOfPeople.length; i++); {
+    i += i; 
+  firstH.innerText = arrayOfPeople[i].name;
+  secondH.innerText = arrayOfPeople[i].job;
+}}
 
-/**
+/** 
  *
  * Create a list of shopping items. You should use an unordered list.
  *
@@ -25,7 +35,16 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
-  //Write your code in here
+  /*let content = document.querySelector("#content");
+  let unorderedList = document.createElement("ul");
+  document.querySelector("#content").appendChild(unorderedList);
+  unorderedList.innerText = shopping[1];]*/
+  let ul = document.createElement("ul");
+  for (i=0; i < 7; i++) {
+    let li = document.createElement("li");
+    li.innerHTML = shopping;
+   document.querySelector("#content").appendChild(li);
+  }
 }
 
 /**
@@ -72,7 +91,8 @@ function exerciseThree(books) {
 //
 
 let people = [
-  { name: "Chris", job: "Teacher" },
+  { name: "Chris",
+   job: "Teacher" },
   { name: "Joanna", job: "Student" },
   { name: "Boris", job: "Prime Minister" }
 ];
