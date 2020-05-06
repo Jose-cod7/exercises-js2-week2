@@ -89,6 +89,38 @@ body {
 	background: #ce5f31;
 }
 
+.blue {
+	background-color: #588fbd;
+}
+.blue .btn-primary{
+	background-color: #ffa500;
+}
+.blue .btn-secondary{
+	background-color: black;
+	color: white;
+}
+.orange {
+	background-color: #f0ad4e;
+}
+.orange .btn-primary{
+	background-color: #5751fd;
+}
+.orange .btn-secondary{
+	background-color: #31b0d5;
+	color: white;
+}
+.green {
+	background-color: #87ca8a;
+}
+.green .btn-primary{
+	background-color: black;
+}
+.green .btn-secondary{
+	background-color: #8c9c08;
+}
+
+
+
 /* Article */
 .article {
 	margin-bottom: 2em;
