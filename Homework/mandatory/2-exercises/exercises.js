@@ -74,11 +74,29 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
+
+  books[0].cover = "https://i.postimg.cc/bJYwLH5k/book-1.jpg"
+  books[1].cover = 'https://i.postimg.cc/fRh5HBcV/book2.jpg'
+  books[2].cover = 'https://i.postimg.cc/KY0N8bdT/book3.jpg'
+
   const contentDiv = document.querySelector("#content");
-  books.forEach(function (book) {
+  const bookList = document.createElement('ul');
+  contentDiv.appendChild(bookList)
+  books.forEach(function (book, index) {
+    const bookDetailList = document.createElement('li')
     const bookListPara = document.createElement('p')
-    contentDiv.appendChild(bookListPara)
-    bookListPara.innerText = book.title + ' - ' +book.author 
+    const bookImg = document.createElement('img')
+    if (book.alreadyRead) {
+     bookDetailList.style.backgroundColor = 'green' 
+    } else {
+    bookDetailList.style.backgroundColor = 'red'}
+
+    bookImg.setAttribute('src', book.cover)
+    bookList.appendChild(bookDetailList)
+    bookDetailList.appendChild(bookListPara)
+    bookDetailList.appendChild(bookImg)
+    bookListPara.innerText = book.title + ' - ' +book.author
+    bookListPara.id = 'book' + index
   })
 }
 
@@ -122,5 +140,6 @@ const books = [
     alreadyRead: true
   }
 ];
+
 
 exerciseThree(books);
